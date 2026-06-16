@@ -22,7 +22,11 @@ https://creatordavidzarza.github.io/GameStore/
 <a href="https://youtu.be/3HPN8KApBOg">
     <img src="assets/img/miniaturiavideo2.jpg" width="700">
 </a>
+<h2>Video chat con la IA</h2>
+<p> Click en el enlace</p>
+https://youtu.be/62cLMlm-DK8   
 
+    
 ---
 
 ## 📖 Descripción
@@ -35,18 +39,6 @@ LocalStorage es una característica de los navegadores web que permite guardar d
 
 ---
 
-## 🚀 Funcionalidades
-
-* 🎮 Catálogo dinámico de videojuegos.
-* ➕ Alta de productos desde panel administrador.
-* ❌ Eliminación de productos.
-* 🛒 Carrito de compras funcional.
-* 💳 Checkout con simulación de pago.
-* 📦 Control de stock mediante licencias disponibles.
-* 💾 Persistencia de datos con LocalStorage.
-* 🔑 Generación automática de ID para productos.
-
----
 
 ## &#x20;Registro Principal
 
@@ -92,26 +84,6 @@ incluso cuando existen videojuegos con nombres similares o disponibles en difere
 
 ---
 
-## 🏗 Estructura de Datos
-
-```text
-Producto
-        ↓
-Arreglo productos[] (se utiliza un arreglo para almacenar múltiples registros dentro de una misma estructura.
-Cada producto se guarda como un elemento del arreglo, lo que permite agregar, buscar, modificar o eliminar productos de forma dinámica.
-No se crean variables individuales como producto1, producto2, producto3, etc., porque esa solución sería poco práctica y difícil de mantener cuando la cantidad de productos aumenta.
-El arreglo permite gestionar cualquier cantidad de productos utilizando una única estructura organizada.)
-        ↓
-Catálogo
-        ↓
-Carrito
-        ↓
-Checkout
-        ↓
-LocalStorage
-```
-
----
 
 ## 🛠 Tecnologías Utilizadas
 <table align="center">
