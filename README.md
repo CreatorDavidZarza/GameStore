@@ -6,6 +6,13 @@
 GitHub Pages:
 https://creatordavidzarza.github.io/GameStore/
 
+##Video Explicativo: https://youtu.be/9_Av3vR9OpU
+![GameStore Preview](assets/img/Miniaturavideo.jpg)
+
+##Video de como funciona la página
+https://youtu.be/3HPN8KApBOg
+![GameStore Preview](assets/img/miniaturavideo2.jpg)
+
 
 ---
 ## 📖 Descripción
