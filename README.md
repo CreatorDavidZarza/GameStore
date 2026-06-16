@@ -7,15 +7,24 @@ GitHub Pages:
 https://creatordavidzarza.github.io/GameStore/
 
 
-## 🎥 Video explicativo
-CLICK EN LA IMAGEN
-[![Video Demo](assets/img/Miniaturavideo.jpg)]((https://youtu.be/9_Av3vR9OpU))
+<h2>🎥 Video explicativo</h2>
 
-## 🎥 Video Funcionamiento de la página
-CLICK EN LA IMAGEN
-[![Video Demo](assets/img/miniaturiavideo2.jpg)]((https://youtu.be/3HPN8KApBOg))
+<p>CLICK EN LA IMAGEN</p>
+
+<a href="https://youtu.be/9_Av3vR9OpU">
+    <img src="assets/img/Miniaturavideo.jpg" width="700">
+</a>
+
+<h2>🎥 Video Funcionamiento de la página</h2>
+
+<p>CLICK EN LA IMAGEN</p>
+
+<a href="https://youtu.be/3HPN8KApBOg">
+    <img src="assets/img/miniaturiavideo2.jpg" width="700">
+</a>
 
 ---
+
 ## 📖 Descripción
 
 **GameStore es un e-commerce de venta de videojuegos digitales**
