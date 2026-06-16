@@ -4,6 +4,7 @@
 ## 🌐 Demo
 
 GitHub Pages:
+https://creatordavidzarza.github.io/GameStore/
 
 
 ---
