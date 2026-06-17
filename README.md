@@ -43,7 +43,7 @@ LocalStorage es una característica de los navegadores web que permite guardar d
 
 **El registro principal de la aplicación se define como Producto, utilizado para representar cada videojuego dentro del catálogo. Cada registro almacena la información necesaria para su visualización, control de stock y proceso de compra.
 
-En la implementación, cada vez que el administrador carga un videojuego, se crea un nuevo registro,
+En la implementación, cada vez que el administrador carga un videojuego, se crea un nuevo registro de tipo Producto.
 
 Ejemplo de la estructura utilizada en el código:
 
@@ -58,7 +58,7 @@ const nuevoProducto = {
     imagen: imagen
 };
 ```
-Este objeto constituye la implementación del registro Producto dentro de la aplicación.
+Por lo tanto, el registro Producto constituye la estructura central de la aplicación, ya que toda la información se organiza y administra a partir de este registro.
 
 ```javascript
 Ejemplo de un registro cargado
@@ -72,8 +72,18 @@ const producto = {
     imagen: "img/fc25.jpg"
 };
 ```
-En la aplicación no se utilizan múltiples variables independientes como producto1, producto2, producto3, etc., ya que esta práctica dificultaría la administración de los datos a medida que aumenta la cantidad de videojuegos. Esto se debe a que cada nuevo producto requeriría crear una variable adicional y modificar manualmente el código para acceder, buscar o actualizar la información. Además, operaciones comunes como listar todos los videojuegos, realizar búsquedas, controlar el stock o eliminar productos serían mucho más complejas. Entonces se trabaja sobre el REGISTRO PRINCIPAL
+el control de dato no se declara explícitamente dentro del objeto nuevoProducto. El control del tipo de dato se realiza mediante los formularios HTML y las validaciones implementadas en JavaScript.
+Ejemplo:
+```html
+**<input type= "text" id="categoria">**
+```
+luego para obtener la información en el lenguaje javascript en este caso:
+```javascript
+**const nombre = document.getElementById("nombreProducto").value;**
+```
+para los datos que tienen valor numérico hace una conversión explicita para asegurarse de que ese valor sea numérico.
 
+En la aplicación no se utilizan múltiples variables independientes como producto1, producto2, producto3,etc., ya que esta práctica dificultaría la administración de los datos a medida que aumenta la cantidad de  videojuegos. Por ello utilizamos el registro principal (Producto), para representar cada videojuego.
 
 ### Campos del registro
 
@@ -86,20 +96,48 @@ En la aplicación no se utilizan múltiples variables independientes como produc
 | precio            | Real         |
 | cantidadLicencias | Entero       |
 | imagen            | Alfanumérico |
-
+---
 ### 🔑 Clave Principal
 
-La clave principal del registro es `idProducto`.
+La clave principal del registro es **idProducto**.
+
+Se seleccionó idProducto como clave principal porque permite identificar de manera única cada videojuego dentro del sistema. A diferencia de otros campos como nombreProducto, categoria o plataforma, el identificador no se repite entre registros, evitando ambigüedades y conflictos al administrar la información.
+Esta decisión permite que la aplicación pueda localizar, modificar, eliminar y gestionar correctamente cada videojuego, incluso cuando existen productos con el mismo nombre o disponibles en distintas plataformas. Además, la clave idProducto es utilizada por módulos como el catálogo, el panel administrador, el carrito de compras y el control de stock, garantizando la integridad y organización de los datos almacenados.
+
+Ejemplo de una funcionalidad del idProducto:
 
 ```javascript
-idProducto: 1
+    function agregarAlCarrito(idProducto) {
+const producto = productos.find(
+p => p.idProducto === idProducto
+);
+carrito.push(producto);
+}
+```
+Cuando se hace click en el botón **“agregar al carrito”**
+```html
+<button onclick="agregarAlCarrito(2)">
+    Agregar al carrito
+</button>
 ```
 
-**Este campo identifica de forma única a cada videojuego dentro del sistema.**
-Su utilización permite distinguir cada videojuego, incluso cuando existen videojuegos con nombres similares o disponibles en diferentes plataformas. Además, facilita la gestión de los registros, para poder eliminar, cambiarlos, etc.
+Se ejecuta a su vez, la función mencionada anteriormente agregarAlCarrito(2);
+Entonces javascript busca en donde se almacenan todos los registros productos, el **idProducto** que, **sea igual al que se agregó al carrito.**
+```javascript
+    const producto = productos.find(
+        p => p.idProducto === 2 ejemplo si el producto agregado tiene idProducto = 2
+    );
+```
+Si no existiera idProducto tendríamos algo similar a:
+**agregarAlCarrito("GTA V");**
+Pero como sabemos de qué plataforma es, o cuantas licencias tenemos de GTA V en tal plataforma. Entonces no sabrías que producto tendría que ir en agregarAlCarrito.
 
 ---
-
+### Reflexión sobre el uso de Inteligencia Artificial
+Al utilizar la IA para realizar este trabajo, me sorprendió hasta dónde se puede llegar al plasmar ideas en un prompt bien elaborado. Básicamente, es posible iterar los prompts tantas veces como sea necesario hasta alcanzar el resultado
+esperado. El avance que tiene esta tecnología puede convertirse en una gran herramienta si se utiliza como apoyo y no como una dependencia. Considero que su mayor valor está en ayudar a desarrollar y organizar ideas propias, ya sea mediante texto, imágenes o propuestas de solución. Sin embargo, también es importante aportar contexto y criterio personal, ya que la IA puede generar respuestas incorrectas o poco coherentes si no recibe instrucciones claras. Por esta razón, creo que la combinación entre creatividad humana e inteligencia artificial permite obtener mejores resultados que cualquiera de las dos por separado.
+###
+---
 
 ## 🛠 Tecnologías Utilizadas
 <table align="center">
