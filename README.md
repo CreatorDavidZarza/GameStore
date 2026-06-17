@@ -8,7 +8,8 @@ https://creatordavidzarza.github.io/GameStore/
 <h2>Video chat con la IA</h2>
 <p> Click en el enlace</p>
 https://youtu.be/62cLMlm-DK8   
-
+<h2>Video chat con la IA (Claude)</h2>
+https://www.youtube.com/watch?v=BqOExknZ9o4&feature=youtu.be
 <h2>🎥 Video explicativo del registro pricipal y la clave o ID</h2>
 
 <p>CLICK EN LA IMAGEN</p>
